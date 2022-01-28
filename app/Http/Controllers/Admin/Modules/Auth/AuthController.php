@@ -46,6 +46,20 @@ class AuthController extends Controller
         }	
 	}
 
+        public function getUser(Request $request)
+    {
+        //$id = $request->user()->id;
+        $user = Auth::user(); 
+        return response()->json(['success' => $user]); 
+        if($user){
+            return $this->sendResponse($user);
+        }
+        else{
+            $error = "user not found";
+            return $this->sendResponse($error);
+        }
+    }
+
 
 
 
