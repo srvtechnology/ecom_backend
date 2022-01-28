@@ -373,6 +373,15 @@ class CategoryController extends Controller
     }
 
 
+
+
+   /**
+     *   Method      : subcategorydelete
+     *   Description : sub category delete
+     *   Author      : Sayan
+     *   Date        : 2022-JAN-28
+    **/
+
     public function subcategorydelete($id)
     {
     	$response = [];
